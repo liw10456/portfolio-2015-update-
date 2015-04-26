@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<html lang="en-US">
+<head>
+  <title>WenChing Li Design - UI/UX * Tech</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+
+<!-- Style-->
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+  <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+  <![endif]-->
+
+
+</head>
+
+<body>
+ <div id="container">
+<div ng-app="myportfolio" ng-controller="namesCtrl">
+  <div id="header">
+
+   <div class="btn-group btn-group-justified" role="group" aria-label="...">
+
+  <div class="btn-group dropdown" role="group">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+    Works
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+    <li ng-repeat="x in projects" role="presentation"><a role="menuitem" tabindex="-1" href="{{ x.link }}">* &nbsp {{ x.title }}</a></li>
+ 
+  </ul>
+  </div>
+    
+  <div class="btn-group" role="group">
+  <a href="aboutme.html"><button type="button" class="btn btn-default">About Me</button></a>
+  </div>
+
+  <div class="btn-group" role="group">
+   <a href="https://www.dropbox.com/s/wkdzqr08goxjfe3/WenChingLi_resume_2015.pdf?dl=0" onclick="window.open(this.href); return false;">
+    <button class="btn btn-default">Resume</button></a>
+  </div>
+
+  </div>
+</div> <!-- end of header -->
+
+ 
+  <div id="intro"class="row">
+  	<div class="col-md-12">
+       <h1>Hi, I'm WenChing Li</h1>
+  		 <h3>Putting User First.</h3>
+	  </div>
+  </div>
+
+
+
+  <div id="strategies">
+   <div id="box-strategies">
+   <div id="strategy-1" class="col-md-4">
+    <img width="50rem"src="http://wenchingli.com/images/Research_icon_White.png"/>
+    <h3>Research</h3>
+    <p>Data can tell the truth and allows us to understand how people use the platform. Research is my first step.
+    </p>
+
+
+
+  </div>
+
+
+   <div id="strategy-2" class="col-md-4">
+    <img width="50rem" src="http://wenchingli.com/images/Design_icon.png"/>
+    <h3>Design and Technology</h3>
+    <p>It can start with a wireframe, digital prototype, or even sketch. The way providing a better UX is the best strategy.</p>
+  </div>
+
+   <div id="strategy-3" class="col-md-4">
+    <section>
+    <div><img  width="50rem" src="http://wenchingli.com/images/Refine_icon.png"/></div>  
+    <h3>User Testing and Next Iteration</h3>
+    <p>To perceive how users manipulate the product and improve the quality of their lives is one my motivations to build career on design.</p>
+    </section>
+   </div>
+  
+  </div> <!-- end of box-strategies -->
+  </div> <!-- end of strategy -->
+
+
+
+    <div class="col-md-6" ng-repeat="x in projects" > 
+     <div><a href="{{ x.link }}"> <img width="330" height="350" ng-src="{{ x.image }}"></img></a></div>
+      <div ><h3> {{ x.title }} </h3></div>
+      <div id="tags"><p> {{ x.tags.join(' , ') }} </p></div>
+      <div ><a href="{{ x.link }}"><button class="Read-More"> {{ x.button }} <span class="glyphicon glyphicon-chevron-right arrow" aria-hidden="true"> <span></button></a></div>
+
+</div>
+
+
+
+</div> <!-- end of container -->
+</div> <!-- end of  ng-app="myportfolio"-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+<footer> COPYRIGHT &copy; WENCHING LI, 2015</footer>
+</html>
